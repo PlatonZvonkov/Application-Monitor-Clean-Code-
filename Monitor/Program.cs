@@ -57,8 +57,7 @@ namespace Observing
 
             while (true)
             {
-                string status = Monitor.Monitoring(argument, hash);
-                Console.Write(status);
+                Monitor.Monitoring(argument, hash);                
                 Thread.Sleep(argument.Frequency * Constants.MINUTE);
             }
         }

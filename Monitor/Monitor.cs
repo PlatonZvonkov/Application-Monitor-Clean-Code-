@@ -13,7 +13,7 @@ namespace Observing
         /**
          * This method is monitoring all processes id's that corresponds with given argument's name.
          */
-        public static string Monitoring(Argument argument, HashSet<int> hash)
+        public static void Monitoring(Argument argument, HashSet<int> hash)
         {  
             // Checking all processes with that name.
             Process[] targetProcesses = Process.GetProcessesByName(argument.Name);
@@ -50,8 +50,7 @@ namespace Observing
                     Termination(id, argument.Name);
                 }
             });
-            // If its still alive we return nothing.
-            return null;
+            // If its still alive doing nothing.           
         }
         
         /**
